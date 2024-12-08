@@ -28,9 +28,18 @@ function start_quiz() {
 
     display_question();
 
+    function myclock() {
+    let clock = new Date()
+    clock.toLocaleTimeString();
+    console.log(clock);
+    
+    }
+
     
     function display_question() {
-                
+        let new_clock = document.createElement("h2")
+        new_clock.innerHTML = myclock();
+        
         let quiz_papaer_div = document.getElementById("quiz_paper");
         quiz_papaer_div.innerHTML = "";
 
@@ -47,6 +56,8 @@ function start_quiz() {
         ans1_opt2.value = "ans2";
         ans1_opt2.name = "radiobtn"
     
+        let br_br = document.createElement("br");
+
         let ans1_opt1_label1 = document.createElement("label");
         ans1_opt1_label1.textContent = questions_all[qno].ans1;
     
@@ -54,13 +65,14 @@ function start_quiz() {
         ans1_opt2_label2.textContent = questions_all[qno].ans2;
     
         quiz_papaer_div = document.getElementById("quiz_paper");
+        quiz_papaer_div.appendChild(new_clock);
         quiz_papaer_div.appendChild(question1);
         quiz_papaer_div.appendChild(ans1_opt1);
         quiz_papaer_div.appendChild(ans1_opt1_label1);
         quiz_papaer_div.appendChild(ans1_opt2);
         quiz_papaer_div.appendChild(ans1_opt2_label2);
         
-        let br_br = document.createElement("br");
+        
     
         let btn_next = document.createElement("button");
         btn_next.type = "button";
@@ -79,11 +91,10 @@ function start_quiz() {
         else{
             alert("Paper End");
         }
-        
     }
      
     
-     // loop end
+  
 
 
     //  Next Question Function Start Here 

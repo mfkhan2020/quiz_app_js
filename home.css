@@ -9,21 +9,22 @@ h1{
     text-align: center;
     color: blueviolet;
 }
-div{
+.container{
     border: solid;
     width: fit-content;
     height: fit-content;
-    /* margin: auto; */
-    /* margin-top: 200px; */
     padding: 50px;  
 }
 input{
-    margin: 20px;
+    /* margin: 20px;
     width: 300px;
-    height: 30px;
+    height: 30px; */
     border-radius: 25px;
     text-align: center;
     font-weight: 900;
+}
+p{
+    font-size: 20px;
 }
 label{
     font-size: 20px;
@@ -42,11 +43,12 @@ button{
     border: none;
     background-color: rebeccapurple;
     cursor: pointer;
+    margin-top: 20px;
 }
-a{
+/* a{
     text-align: center;
     font-size: 20px;
     display: block;
     margin: 20px;
     
-}
+} */
