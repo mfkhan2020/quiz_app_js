@@ -5,8 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Quiz Page</title>
     <link rel="shortcut icon" href="images/html logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="html_quiz.css">
 </head>
 <body>
-    
+    <div class="main-container">
+        <div class="left-area-div">
+            <select name="sdd" id="question-list">
+                <option value="">abc</option>
+            </select>
+        </div>
+        <div class="center-area-div">
+            <div class="question-div">
+                <h1>HTML QUIZ</h1>
+                <p id="question" class="para-question">Question 1 : This is a "Example" question</p>
+                <button id="answer1" class="btn-answer">a. Right</button>
+                <button id="answer1" class="btn-answer">b. Wrong</button>
+                <button id="answer1" class="btn-answer">c. True</button>
+                <button id="answer1" class="btn-answer">d. False</button>
+            </div>
+            <button id="next-question" onclick="">Next Question</button>
+        </div>
+        <div class="right-area-div">
+            <h1>Timer Area</h1>
+            <button id="btn-start" class="btn-start">Start Paper</button>
+            <button id="btn-end" class="btn-end">End Paper</button>
+        </div>
+    </div>
+<script src="html_quiz.js"></script>
 </body>
 </html>
