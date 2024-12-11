@@ -1,50 +1,71 @@
-/* body{
-    
-    
-     justify-content: center;
-    align-items: center;
-    margin: 0; 
-} */
-.card{
-    display: inline-block;
-    border: solid rebeccapurple;
-    width: fit-content;
-
-    
+body{
+    background-color: black;
 }
-img{
-    width: 20%;
-    /* display: inline; */
-
+.card{
+    
+    padding: 25px;
+    width: 15%;
+    height: auto;
+    margin: 10px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    background-color: lightcyan;
 }
 h1{
     text-align: center;
-    color: blueviolet;
+    margin-top: 20px;
+    color: lightblue;
+    font-weight: 900;
+
+}
+.card:hover{
+    width: 16%;
+    height: auto;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    border: none;
+    background-color: rgb(24, 8, 238);
+    color: aliceblue;
+    font-size: 1.2em;
+    border-radius: 25px;
+    padding: 10px;
+    cursor: pointer;
 }
 .container{
-    /* border: solid;
+    border: solid;
     width: fit-content;
     height: fit-content;
-    padding: 50px; */
+    
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
-input{
+/* input{
     /* margin: 20px;
     width: 300px;
-    height: 30px; */
+    height: 30px; 
     border-radius: 25px;
     text-align: center;
     font-weight: 900;
-}
-p{
+} */
+/* p{
     font-size: 20px;
-}
-label{
+} */
+/* label{
     font-size: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
-}
-button{
+} */
+/* button{
     display: block;
     margin: auto;
     width: 300px;
@@ -57,7 +78,7 @@ button{
     background-color: rebeccapurple;
     cursor: pointer;
     margin-top: 20px;
-}
+} */
 /* a{
     text-align: center;
     font-size: 20px;
