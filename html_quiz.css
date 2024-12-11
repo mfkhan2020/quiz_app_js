@@ -6,14 +6,21 @@ body{
     justify-content: center;
     padding: 0;
 }
+
+/* Left Area Start */
 .left-area-div{
     width: 20%;
     border: solid blue;
+    background-color: #A4BFEB;
 }
+/* Left Area End */
+
+/* Center Area Start */
 .center-area-div{
     width: 60%;
     border: solid rebeccapurple;
     padding: 20px;
+    background-color: #A4A8D1;
 }
 .question-div{
     text-align: center;
@@ -40,6 +47,9 @@ h1{
 .btn-answer:hover{
     background-color: lightsteelblue;
 }
+/* Center Area End */
+
+/* Right Area Start */
 .right-area-div{
     width: 20%;
     border: solid darkgreen;
@@ -47,6 +57,15 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #A4BFEB;
+}
+.timer{
+    background-color: #1D263B;
+    color: white;
+    padding: 10px;
+    border-radius: 50px;
+    width: 30%;
+    text-align: center;
 }
 .btn-start, .btn-end{
     width: 60%;
@@ -60,9 +79,7 @@ h1{
 }
 .btn-start{
     border-radius: 15px 15px 0px 0px;
-    
 }
-
 .btn-end{
     border-radius: 0px 0px 15px 15px;
 }
@@ -74,3 +91,4 @@ h1{
     background-color: red;
     color: white;
 }
+/* Right Area End */

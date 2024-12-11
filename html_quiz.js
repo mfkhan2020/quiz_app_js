@@ -2,6 +2,29 @@
 //     window.location.href = "html_quiz.html"
 // }
 
+
+// Timer Start
+window.onload = timer;
+let mins =  29;
+let sec = 59;
+
+setInterval(function timer () {
+    document.getElementById("timer").innerHTML = `${mins} : ${sec}`;
+    sec--;
+    if (sec < 0){
+        if (mins < 1){
+            mins = 29;
+            sec = 59;
+        } else {
+            mins--;
+            sec = 59;
+        }
+    } 
+}, 1000);
+// Timer End
+
+
+
 function start_quiz() {
     let questions_arr = [{
     question : "1. What tag is used to define a hyperlink in HTML?",
