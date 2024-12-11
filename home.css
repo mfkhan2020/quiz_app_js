@@ -1,19 +1,32 @@
-body{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
+/* body{
+    
+    
+     justify-content: center;
     align-items: center;
-    margin: 0;
+    margin: 0; 
+} */
+.card{
+    display: inline-block;
+    border: solid rebeccapurple;
+    width: fit-content;
+
+    
+}
+img{
+    width: 20%;
+    /* display: inline; */
+
 }
 h1{
     text-align: center;
     color: blueviolet;
 }
 .container{
-    border: solid;
+    /* border: solid;
     width: fit-content;
     height: fit-content;
-    padding: 50px;  
+    padding: 50px; */
+    display: flex;
 }
 input{
     /* margin: 20px;
