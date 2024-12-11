@@ -1,4 +1,6 @@
-
+function html_quiz() {
+    window.location.href = "html_quiz.html"
+}
 
 function start_quiz() {
     let questions_all = [{
