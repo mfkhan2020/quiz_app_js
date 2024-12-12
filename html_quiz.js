@@ -60,63 +60,72 @@ function start_quiz() {
     let opt_2 = document.getElementById("option-2");
     let opt_3 = document.getElementById("option-3");
     let opt_4 = document.getElementById("option-4");
-    let qno = 0;
+    let question_index = 0;
 
     display_question();
     
     function display_question() {
         
-        let quiz_papaer_div = document.getElementById("quiz_paper");
-        quiz_papaer_div.innerHTML = "";
-
-        let question1 = document.createElement("p");
-        question1.innerHTML = questions_all[qno].ques;
-    
-        let ans1_opt1 = document.createElement("input");
-        ans1_opt1.type = "radio";
-        ans1_opt1.value = "ans1";
-        ans1_opt1.name = "radiobtn"
-    
-        let ans1_opt2 = document.createElement("input");
-        ans1_opt2.type = "radio";
-        ans1_opt2.value = "ans2";
-        ans1_opt2.name = "radiobtn"
-    
-        let br_br = document.createElement("br");
-
-        let ans1_opt1_label1 = document.createElement("label");
-        ans1_opt1_label1.textContent = questions_all[qno].ans1;
-    
-        let ans1_opt2_label2 = document.createElement("label");
-        ans1_opt2_label2.textContent = questions_all[qno].ans2;
-    
-        quiz_papaer_div = document.getElementById("quiz_paper");
-        quiz_papaer_div.appendChild(new_clock);
-        quiz_papaer_div.appendChild(question1);
-        quiz_papaer_div.appendChild(ans1_opt1);
-        quiz_papaer_div.appendChild(ans1_opt1_label1);
-        quiz_papaer_div.appendChild(ans1_opt2);
-        quiz_papaer_div.appendChild(ans1_opt2_label2);
-        
-        
-    
-        let btn_next = document.createElement("button");
-        btn_next.type = "button";
-        btn_next.textContent = "Next Question";
-        btn_next.onclick = next_question;
-        quiz_papaer_div.appendChild(br_br);
-        quiz_papaer_div.appendChild(btn_next);
-        
-    }
-
-    function next_question(){
-        qno++;
-        if (qno < questions_all.length){
-            display_question();
+        // let quiz_papaer_div = document.getElementById("quiz_paper");
+        // quiz_papaer_div.innerHTML = "";
+        let options = document.getElementsByName("answer");
+        for (let i = 0; i < questions_arr.length; i++){
+            if (options[i].addEventListener('click', function() {})){
+                let userSelected = options[i].innerText;
+                console.log(userSelected);
+                
+            }
+            ques_1.innerHTML = [i] + questions_arr[question_index].question;
         }
-        else{
-            alert("Paper End");
-        }
+
+    //     let question1 = document.createElement("p");
+    //     question1.innerHTML = questions_all[qno].ques;
+    
+    //     let ans1_opt1 = document.createElement("input");
+    //     ans1_opt1.type = "radio";
+    //     ans1_opt1.value = "ans1";
+    //     ans1_opt1.name = "radiobtn"
+    
+    //     let ans1_opt2 = document.createElement("input");
+    //     ans1_opt2.type = "radio";
+    //     ans1_opt2.value = "ans2";
+    //     ans1_opt2.name = "radiobtn"
+    
+    //     let br_br = document.createElement("br");
+
+    //     let ans1_opt1_label1 = document.createElement("label");
+    //     ans1_opt1_label1.textContent = questions_all[qno].ans1;
+    
+    //     let ans1_opt2_label2 = document.createElement("label");
+    //     ans1_opt2_label2.textContent = questions_all[qno].ans2;
+    
+    //     quiz_papaer_div = document.getElementById("quiz_paper");
+    //     quiz_papaer_div.appendChild(new_clock);
+    //     quiz_papaer_div.appendChild(question1);
+    //     quiz_papaer_div.appendChild(ans1_opt1);
+    //     quiz_papaer_div.appendChild(ans1_opt1_label1);
+    //     quiz_papaer_div.appendChild(ans1_opt2);
+    //     quiz_papaer_div.appendChild(ans1_opt2_label2);
+        
+        
+    
+    //     let btn_next = document.createElement("button");
+    //     btn_next.type = "button";
+    //     btn_next.textContent = "Next Question";
+    //     btn_next.onclick = next_question;
+    //     quiz_papaer_div.appendChild(br_br);
+    //     quiz_papaer_div.appendChild(btn_next);
+        
+    // }
+
+    // function next_question(){
+    //     qno++;
+    //     if (qno < questions_all.length){
+    //         display_question();
+    //     }
+    //     else{
+    //         alert("Paper End");
+    //     }
     }
      
     
