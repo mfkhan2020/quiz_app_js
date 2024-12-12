@@ -10,24 +10,25 @@
 <body>
     <div class="main-container">
         <div class="left-area-div">
-            <select name="sdd" id="question-list">
-                <option value="">abc</option>
+            <h1>Select Question</h1>
+            <select name="sdd" id="question-list" class="question-list">
+                <option value="" id="question-1">Select Question</option>
             </select>
         </div>
         <div class="center-area-div">
             <div class="question-div">
                 <h1>HTML QUIZ</h1>
                 <p id="question" class="para-question">Question 1 : This is a "Example" question</p>
-                <button id="answer1" class="btn-answer">a. Right</button>
-                <button id="answer1" class="btn-answer">b. Wrong</button>
-                <button id="answer1" class="btn-answer">c. True</button>
-                <button id="answer1" class="btn-answer">d. False</button>
+                <button id="option-1" class="btn-answer">a. Right</button>
+                <button id="option-2" class="btn-answer">b. Wrong</button>
+                <button id="option-3" class="btn-answer">c. True</button>
+                <button id="option-4" class="btn-answer">d. False</button>
             </div>
             <button id="next-question" onclick="">Next Question</button>
         </div>
         <div class="right-area-div">
             <h2 id="timer" class="timer">Timer Area</h2>
-            <button id="btn-start" class="btn-start">Start Paper</button>
+            <button id="btn-start" class="btn-start" onclick="start_quiz()">Start Paper</button>
             <button id="btn-end" class="btn-end">End Paper</button>
         </div>
     </div>

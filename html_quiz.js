@@ -28,12 +28,18 @@ setInterval(function timer () {
 function start_quiz() {
     let questions_arr = [{
     question : "1. What tag is used to define a hyperlink in HTML?",
-    answer1 : "<link>",
-    answer2 : "<a>"},
-    
-    {ques : "2. Which tag creates the largest heading in HTML?",
-    ans1 : "<h1>",
-    ans2 : "<h6>"
+    option1 : "<link>",
+    option2 : "<a>",
+    option3 : "<b>",
+    option4 : "<d>",
+    correct_answer : "<a>"
+    },
+    {question : "2. Which tag creates the largest heading in HTML?",
+    option1 : "<h1>",
+    option2 : "<h6>",
+    option3 : "<b>",
+    option4 : "<d>",
+    correct_answer : "<h1>"
     },
     {ques : "3. What is the purpose of the < br > tag?",
     ans1 : "Break Line",
@@ -49,21 +55,16 @@ function start_quiz() {
     },
 ];
 
+    let ques_1 = document.getElementById("question");
+    let opt_1 = document.getElementById("option-1");
+    let opt_2 = document.getElementById("option-2");
+    let opt_3 = document.getElementById("option-3");
+    let opt_4 = document.getElementById("option-4");
     let qno = 0;
 
     display_question();
-
-    function myclock() {
-    let clock = new Date()
-    clock.toLocaleTimeString();
-    console.log(clock);
-    
-    }
-
     
     function display_question() {
-        let new_clock = document.createElement("h2")
-        new_clock.innerHTML = myclock();
         
         let quiz_papaer_div = document.getElementById("quiz_paper");
         quiz_papaer_div.innerHTML = "";
