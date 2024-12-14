@@ -19,12 +19,28 @@
             <div class="question-div">
                 <h1>HTML QUIZ</h1>
                 <p id="question" class="para-question">Question 1 : This is a "Example" question</p>
-                <button id="option-1" class="btn-answer">a. <span name="answer">Right</span></button>
-                <button id="option-2" class="btn-answer">b. <span name="answer">Wrong</span></button>
-                <button id="option-3" class="btn-answer">c. <span name="answer">True</span></button>
-                <button id="option-4" class="btn-answer">d. <span name="answer">False</span></button>
+                
+                <label class="btn-answer" aria-pressed="false"><input type="radio" name="answer" value="1" id="1"><span id="option-1" > Wrong</span></label>
+                <br>
+                <label class="btn-answer" aria-pressed="false"><input type="radio" name="answer" value="2" id="2"><span id="option-2"> True1</span></label>
+                <br>
+                <label class="btn-answer" aria-pressed="false"><input type="radio" name="answer" value="3" id="3"><span id="option-3"> Right</span></label>
+                <br>
+                <label class="btn-answer" aria-pressed="false"><input type="radio" name="answer" value="4" id="4"><span id="option-4"> False1</span></label>
+                
+                <!-- <input type="button" id="option-1" class="btn-answer" aria-pressed="false" name="answer" value="">Right1
+                <input type="button" id="option-2" class="btn-answer" aria-pressed="false" name="answer" value="">Wrong1
+                <input type="button" id="option-3" class="btn-answer" aria-pressed="false" name="answer" value="">True11
+                <input type="button" id="option-4" class="btn-answer" aria-pressed="false" name="answer" value="">False1 -->
+
+                <!-- <button id="option-2" class="btn-answer" aria-pressed="false" name="answer">Wrong</button>
+                <button id="option-3" class="btn-answer" aria-pressed="false" name="answer">True1</button>
+                <button id="option-1" class="btn-answer" aria-pressed="false" name="answer">Right</button>
+                <button id="option-4" class="btn-answer" aria-pressed="false" name="answer">False1</button> -->
+
+                                
             </div>
-            <button id="next-question" onclick="">Next Question</button>
+            <button id="next-question" onclick="next_question()">Next Question</button>
         </div>
         <div class="right-area-div">
             <h2 id="timer" class="timer">Timer Area</h2>

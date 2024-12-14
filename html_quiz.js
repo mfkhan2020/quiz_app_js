@@ -53,7 +53,7 @@ function start_quiz() {
     ans1 : "Unordered List",
     ans2 : "Ordered List"
     },
-];
+    ];
 
     let ques_1 = document.getElementById("question");
     let opt_1 = document.getElementById("option-1");
@@ -61,22 +61,49 @@ function start_quiz() {
     let opt_3 = document.getElementById("option-3");
     let opt_4 = document.getElementById("option-4");
     let question_index = 0;
+    let score = 0;
 
-    display_question();
+    next_question();
     
-    function display_question() {
+    function next_question() {
         
         // let quiz_papaer_div = document.getElementById("quiz_paper");
         // quiz_papaer_div.innerHTML = "";
+        
+
         let options = document.getElementsByName("answer");
-        for (let i = 0; i < questions_arr.length; i++){
-            if (options[i].addEventListener('click', function() {})){
-                let userSelected = options[i].innerText;
-                console.log(userSelected);
-                
+        for (let i = 0; i < options.length; i++){
+            if (options[i].checked){
+                let userSelected = options[i].value;
+                let user_ans = questions_arr[question_index][`option${userSelected}`];
+                let corr_anw = questions_arr[question_index].correct_answer;
+                if (corr_anw === user_ans){
+                    score++
+                }
+                options[i].checked = false
             }
-            ques_1.innerHTML = [i] + questions_arr[question_index].question;
+        
+            ques_1.innerText = questions_arr[question_index].question;
+            opt_1.innerText = questions_arr[question_index].option1
+            opt_2.innerText = questions_arr[question_index].option2
+            opt_3.innerText = questions_arr[question_index].option3
+            opt_4.innerText = questions_arr[question_index].option4
+
+            
         }
+        
+        // console.log(options[question_index].innerText);
+        // console.log(options[0].getAttribute("aria-pressed"));
+
+        
+        
+        
+        
+
+
+    }
+
+}
 
     //     let question1 = document.createElement("p");
     //     question1.innerHTML = questions_all[qno].ques;
@@ -126,7 +153,7 @@ function start_quiz() {
     //     else{
     //         alert("Paper End");
     //     }
-    }
+    
      
     
   
@@ -171,7 +198,7 @@ function start_quiz() {
     } 
     */
     //  Next Question Function End Here
-}
+
 
 // let questions_all = {
 //     ques1 : "1. What tag is used to define a hyperlink in HTML?",
