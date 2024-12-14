@@ -23,10 +23,7 @@ setInterval(function timer () {
 }, 1000);
 // Timer End
 
-
-
-function start_quiz() {
-    let questions_arr = [{
+let questions_arr = [{
     question : "1. What tag is used to define a hyperlink in HTML?",
     option1 : "<link>",
     option2 : "<a>",
@@ -40,20 +37,7 @@ function start_quiz() {
     option3 : "<b>",
     option4 : "<d>",
     correct_answer : "<h1>"
-    },
-    {ques : "3. What is the purpose of the < br > tag?",
-    ans1 : "Break Line",
-    ans2 : "Bold Text"
-    },
-    {ques : "4. Which HTML tag is used to define a table cell?",
-    ans1 : "<td>",
-    ans2 : "<th>"
-    },
-    {ques : "5. What does the < ul > tag represent?",
-    ans1 : "Unordered List",
-    ans2 : "Ordered List"
-    },
-    ];
+    }];
 
     let ques_1 = document.getElementById("question");
     let opt_1 = document.getElementById("option-1");
@@ -62,48 +46,62 @@ function start_quiz() {
     let opt_4 = document.getElementById("option-4");
     let question_index = 0;
     let score = 0;
+    let btn_end = document.getElementById("btn-end");
+    let btn_start = document.getElementById("btn-start");
+    let btn_next = document.getElementById("btn-next");
+    let user_score;
 
-    next_question();
+
     
     function next_question() {
         
         // let quiz_papaer_div = document.getElementById("quiz_paper");
         // quiz_papaer_div.innerHTML = "";
-        
+        btn_end.disabled = true;
 
         let options = document.getElementsByName("answer");
         for (let i = 0; i < options.length; i++){
-            if (options[i].checked){
+            if (options[i].checked  == true){
                 let userSelected = options[i].value;
-                let user_ans = questions_arr[question_index][`option${userSelected}`];
-                let corr_anw = questions_arr[question_index].correct_answer;
+                let user_ans = questions_arr[question_index -1][`option${userSelected}`];
+                let corr_anw = questions_arr[question_index -1].correct_answer;
+                btn_next.disabled = false;
                 if (corr_anw === user_ans){
                     score++
                 }
-                options[i].checked = false
             }
-        
-            ques_1.innerText = questions_arr[question_index].question;
-            opt_1.innerText = questions_arr[question_index].option1
-            opt_2.innerText = questions_arr[question_index].option2
-            opt_3.innerText = questions_arr[question_index].option3
-            opt_4.innerText = questions_arr[question_index].option4
-
-            
+            else{
+                options[i].checked;
+            }
+            options[i].checked = false
         }
+
+            if (question_index > questions_arr.length -1){
+
+                user_score = (score / questions_arr.length) * 100 + "%";
+                btn_end.disabled = false;
+            }
+            else{
+                ques_1.innerText = questions_arr[question_index].question;
+                opt_1.innerText = questions_arr[question_index].option1;
+                opt_2.innerText = questions_arr[question_index].option2;
+                opt_3.innerText = questions_arr[question_index].option3;
+                opt_4.innerText = questions_arr[question_index].option4;
+                btn_start.disabled = true;
+                btn_next.disabled = false;
+                question_index++;
+                }
+         console.log(user_score);
+        
         
         // console.log(options[question_index].innerText);
         // console.log(options[0].getAttribute("aria-pressed"));
-
-        
-        
-        
-        
-
-
     }
-
-}
+    
+    function enable_btn(){
+        btn_next.disabled = false;
+    }
+    
 
     //     let question1 = document.createElement("p");
     //     question1.innerHTML = questions_all[qno].ques;
